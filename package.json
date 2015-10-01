@@ -1,10 +1,10 @@
 {
-  "name": "generator-poker",
+  "name": "generator-cmtech",
   "version": "0.0.0",
   "description": "cmtech poker generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "yanione2/generator-poker",
+  "repository": "mohwa/generator-cmtech",
   "author": {
     "name": "",
     "email": "",
