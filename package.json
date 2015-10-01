@@ -1,0 +1,33 @@
+{
+  "name": "generator-poker",
+  "version": "0.0.0",
+  "description": "cmtech poker generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "yanione2/generator-poker",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "say": "^0.6.0",
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.2.2",
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

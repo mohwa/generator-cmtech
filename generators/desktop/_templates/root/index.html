@@ -1,0 +1,72 @@
+<!doctype html>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns:ng="http://angularjs.org" id="ng-app" lang="en">
+<head>
+  <title>Loading..</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-title" content="Loading..">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="description" content="poker_lobby_internal">
+
+  <link rel="shortcut icon" type="image/x-icon" href="resources/img/Window_Icon/Icon.ico" />
+
+  <link rel="stylesheet" type="text/css" href="resources/css/app.css">
+  <script type="text/javascript">
+
+    function isMSBrowser() {
+
+      var ret = false;
+
+      var ua = window.navigator.userAgent;
+
+      ua = ua.toLowerCase();
+
+      var match = /(edge)\/([\w.]+)/.exec(ua) ||
+        /(msie) ([\w.]+)/.exec(ua) ||
+        ua.indexOf("trident") >= 0 && /(rv)(?::| )([\w.]+)/.exec(ua) ||
+        ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) ||
+        null;
+
+      var matchedBrowser = match[5] || match[3] || match[1] || '';
+
+      if (
+        matchedBrowser === 'msie' ||
+        matchedBrowser === 'rv' ||
+        matchedBrowser === 'edge'
+      ) {
+        ret = true;
+      }
+
+      return ret;
+    }
+
+    if (isMSBrowser()) {
+      document.write('<link rel="stylesheet" type="text/css" href="resources/css/ieApp.css">');
+    }
+
+  </script>
+  <!--[if IE 9]>
+  <link rel="stylesheet" type="text/css" href="resources/css/ie9App.css">
+  <![endif]-->
+
+  <script type="text/javascript" data-main="main.js" src="lib/external/require/require.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <layouts type="header" controller-name="headerController"></layouts>
+
+  <div id="container">
+    <view-container ng-view></view-container>
+  </div>
+
+  <layouts type="footer" controller-name="footerController"></layouts>
+  <spinner></spinner>
+</div>
+</body>
+</html>

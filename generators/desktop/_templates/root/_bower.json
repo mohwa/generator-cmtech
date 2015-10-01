@@ -1,0 +1,40 @@
+<% var ngVer = "1.2.26" %>
+{
+  "name": "<%= env.appName %>",
+  "description": "<%= env.appName %> package manager",
+  "homepage": "http://www.cmt-korea.com/",
+  "author": {
+    "name": "sgjeon"
+  },
+
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "angular": "<%= ngVer %>",
+    "angular-animate": "<%= ngVer %>",
+    "angular-cookies": "<%= ngVer %>",
+    "angular-route": "<%= ngVer %>",
+    "angular-resource": "<%= ngVer %>",
+    "angular-sanitize": "<%= ngVer %>",
+    "requirejs": "2.1.14",
+    "jquery": "2.1.1",
+    "malihu-custom-scrollbar-plugin": "3.0.8",
+    "jquery-ui": "1.11.2",
+    "json3": "3.3.2",
+    "linqjs": "",
+    "xml2json": "",
+    "purl": "2.3.1",
+    "jquery-mousewheel": "3.0.6",
+    "socket.io-client": "1.3.5",
+    "console.image": "",
+    "enquire": "2.1.2",
+    "angular-local-storage": "0.1.5",
+    "matchMedia": "0.2.0",
+    "jquery.browser": "0.0.7"
+  }
+}
