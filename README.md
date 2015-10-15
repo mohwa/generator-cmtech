@@ -1,3 +1,3 @@
 # generator-cmtech
 
-generator-cmtech module
+yeoman-generator 생성 예제
